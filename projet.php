@@ -14,7 +14,7 @@
         require('config.php');
 
 
-		test
+		testq
 
 
 		?>
