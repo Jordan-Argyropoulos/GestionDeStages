@@ -20,8 +20,8 @@
 			$password = stripslashes($_REQUEST['password']);
 			$password = mysqli_real_escape_string($conn, $password);
 			//requéte SQL + mot de passe crypté
-			  $query = "INSERT into `users` (username, email, password)
-						VALUES ('$username', '$email', '".hash('sha256', $password)."')";
+			  $query = "INSERT into `users` (email, password)
+						VALUES ('$email', '".hash('sha256', $password)."')";
 			// Exécuter la requête sur la base de données
 			  $res = mysqli_query($conn, $query);
 			  if($res){
@@ -35,7 +35,6 @@
 		  <form class="box" action="" method="post">
 			<h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>
 			  <h1 class="box-title">S'inscrire</h1>
-			<input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required />
 			  <input type="text" class="box-input" name="email" placeholder="Email" required />
 			  <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
 			  <input type="submit" name="submit" value="S'inscrire" class="box-button" />
