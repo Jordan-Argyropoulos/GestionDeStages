@@ -20,7 +20,7 @@
 			$password = stripslashes($_REQUEST['password']);
 			$password = mysqli_real_escape_string($conn, $password);
 			//requéte SQL + mot de passe crypté
-			  $query = "INSERT into `users` (email, password)
+			  $query = "INSERT into `etudiants` (email, password)
 						VALUES ('$email', '".hash('sha256', $password)."')";
 			// Exécuter la requête sur la base de données
 			  $res = mysqli_query($conn, $query);
