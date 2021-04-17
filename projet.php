@@ -34,9 +34,9 @@
 		  ?>
 		  <form class="box" action="" method="post">
 			  <h1 class="box-title">S'inscrire</h1>
-			  <input type="text" class="box-input" name="email" placeholder="adresse mail" required />
+			  <input type="text" class="box-input" name="email" placeholder="Adresse mail" required />
 			  <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
-			  <input type="password" class="box-input" name="password_confirm" placeholder="confirmation du mot de passe" required />
+			  <input type="password" class="box-input" name="password_confirm" placeholder="Confirmation du mot de passe" required />
 			  <input type="text" class="box-input" name="nom_etudiant" placeholder="Nom de l'étudiant" required />
 			  <input type="text" class="box-input" name="prenom_etudiant" placeholder="Prénom de l'étudiant" required />
 			  <input type="submit" name="submit" value="S'inscrire" class="box-button" />
