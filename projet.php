@@ -33,7 +33,6 @@
 		  }else{
 		  ?>
 		  <form class="box" action="" method="post">
-			<h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>
 			  <h1 class="box-title">S'inscrire</h1>
 			  <input type="text" class="box-input" name="email" placeholder="Email" required />
 			  <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
