@@ -9,6 +9,7 @@ try{
 }
 catch (PDOException $error ) {
     $message = '<p>Erreur à la connexion : ' . $erreur->getMessage(). '</p>';
+    echo $message; die();
 }
 
 ?>
