@@ -1,56 +1,22 @@
 <!DOCTYPE html>
 
-
 <?php
+require 'config.php';
 
-function debug($text)
-{
-    ?><pre><?php print_r($text); ?></pre><?php
+$sql = 'SELECT email_etudiant, nom_etudiant, prenom_etudiant, stage FROM etudiants';
+
+foreach($pdo->query($sql) as $row){
+    print "<table>";
+    print "<th>Email</th>";
+    print $row['email_etudiant'];
+    print "<th>Nom</th>";
+    print $row['nom_etudiant'];
+    print "<th>Prenom</th>";
+    print $row['prenom_etudiant'];
+    print "<th>Stage</th>";
+    print $row['stage'] . "\n";
+    print "</table>";
 }
 
-
-include("../config.php");
-
-
-// $arrayMonths = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", 
-//                   "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-
-// foreach($arrayMonths as $value)
-// {
-//     $requete = "INSERT INTO mois_annee (nom_mois)
-//             VALUES ($value)";
-//     $pdo->exec($requete);
-// }
-// echo debug($value);
-$requete = "SELECT * FROM etudiants";
-$resObj = $pdo->query($requete);
-$resTabInt = $resObj->fetchAll(PDO::FETCH_OBJ);
-
-foreach($resTabInt as $value)
-{
-    $req = "SELECT * FROM etudiants";
-    $pdo->exec($req);
-}
-
-foreach ($value as $values)
-    {
-        echo "<table>";
-            echo "<thead>";
-                echo "<tr>";
-                    echo "<th>Email</th>";
-                echo "</tr>";
-            echo "</thead>";
-            echo "<tbody>";
-                echo "<tr>";
-                    echo "</td>" . "<td style='background-color:red; text-align:center;'>" . $values . "</td>" ;
-                echo "</tr>" ;
-            echo "</tbody>";
-        echo "</table>";
-    }?>
-
-
-
-
-
-
+?>
 </html>

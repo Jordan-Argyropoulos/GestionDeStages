@@ -30,7 +30,7 @@
 <input type="text" class="box-input" name="email_etudiant" placeholder="Adresse mail">
 <input type="password" class="box-input" name="password" placeholder="Mot de passe">
 <input type="submit" value="connexion" name="valider" class="box-button">
-<p class="box-register">Vous êtes nouveau ici? <a href="projet.php">S'inscrire</a></p>
+<p class="box-register">Vous êtes nouveau ici? <a href="register.php">S'inscrire</a></p>
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>
 <?php } ?>
