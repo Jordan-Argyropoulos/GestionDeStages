@@ -23,7 +23,7 @@
       elseif($pass!=$repass) $erreur="Mots de passe non identiques!";
       else{
          include("config.php");
-         $sel=$pdo->prepare("select id_etudiant from etudiants where email_etudiant=? limit 1");
+         $sel=$pdo->prepare("SELECT id_etudiant from etudiants where email_etudiant=? limit 1");
          $sel->execute(array($email));
          $tab=$sel->fetchAll();
          if(count($tab)>0)

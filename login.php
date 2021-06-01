@@ -6,7 +6,7 @@
    $erreur="";
    if(isset($valider)){
       include("config.php");
-      $sel=$pdo->prepare("select * from etudiants where email_etudiant=? and password=? limit 1");
+      $sel=$pdo->prepare("SELECT * from etudiants where email_etudiant=? and password=? limit 1");
       $sel->execute(array($email,$pass));
       $tab=$sel->fetchAll();
       if(count($tab)>0){
