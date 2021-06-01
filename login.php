@@ -1,11 +1,10 @@
 <?php
    session_start();
+   include("config.php");
    @$email=$_POST["email_etudiant"];
-   @$pass=md5($_POST["password"]);
-   @$valider=$_POST["valider"];
+   @$pass=($_POST["password"]);
    $erreur="";
-   if(isset($valider)){
-      include("config.php");
+   if(isset($_POST['valider'])){
       $sel=$pdo->prepare("SELECT * from etudiants where email_etudiant=? and password=? limit 1");
       $sel->execute(array($email,$pass));
       $tab=$sel->fetchAll();
@@ -25,15 +24,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<form class="box" action="" method="post" name="login">
+<form class="box" action="login.php" method="post" name="login">
 <h1 class="box-title">Connexion</h1>
 <input type="text" class="box-input" name="email_etudiant" placeholder="Adresse mail">
 <input type="password" class="box-input" name="password" placeholder="Mot de passe">
 <input type="submit" value="connexion" name="valider" class="box-button">
 <p class="box-register">Vous êtes nouveau ici? <a href="register.php">S'inscrire</a></p>
-<?php if (! empty($message)) { ?>
-    <p class="errorMessage"><?php echo $message; ?></p>
-<?php } ?>
 </form>
 </body>
 </html>
