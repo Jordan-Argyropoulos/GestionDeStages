@@ -1,27 +1,15 @@
-<?php
-   session_start();
-   if($_SESSION["autoriser"]!="oui"){
-      header("location:login.php");
-      exit();
-   }
-   if(date("H")<18)
-      $bienvenue="Bonjour et bienvenue ".
-      $_SESSION["prenomNom"].
-      " dans votre espace personnel";
-   else
-      $bienvenue="Bonsoir et bienvenue ".
-      $_SESSION["prenomNom"].
-      " dans votre espace personnel";
-?>
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
   <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="sucess">
-    <h1><?php echo $bienvenue?></h1>
-    <a href="logout.php">Déconnexion</a>
-    </div>
-  </body>
+</head>
+<body>
+   <h1 class="box-title">Connexion</h1>
+   <form class="box" action="./php/login.php" method="post" name="login">
+      <input type="text" class="box-input" name="email_etudiant" placeholder="Adresse mail">
+      <input type="password" class="box-input" name="password" placeholder="Mot de passe">
+      <input type="submit" value="connexion" name="valider" class="box-button">
+   </form>
+   <p class="box-register">Vous êtes nouveau ici? <a href="frontregister.php">S'inscrire</a></p>
+</body>
 </html>
