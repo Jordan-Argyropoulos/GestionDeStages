@@ -11,7 +11,7 @@
       $tab=$sel->fetchAll();
       if(count($tab)>0){
          $_SESSION["prenomNom"]=ucfirst(strtolower($tab[0]["prenom_etudiant"])).
-         " ".strtoupper($tab[0]["nom"]);
+         " ".strtoupper($tab[0]["nom_etudiant"]);
          $_SESSION["autoriser"]="oui";
          header("location:index.php");
       }
