@@ -1,6 +1,6 @@
 <?php
    session_start();
-   include("./config.php");
+   include("config.php");
    $email = $_POST["email_etudiant"];
    $pass = $_POST["password"];
    $erreur="";
@@ -12,7 +12,7 @@
          $_SESSION["prenomNom"]=ucfirst(strtolower($tab[0]["prenom_etudiant"])).
          " ".strtoupper($tab[0]["nom_etudiant"]);
          $_SESSION["autoriser"]="oui";
-         header("location:index.php");
+         header("location:./php/index.php");
       }
       else
          $erreur="Mauvais email ou mot de passe!";
