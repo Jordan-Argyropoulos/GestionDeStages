@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-require 'config.php';
+require './config.php';
 
 $sql = 'SELECT email_etudiant, nom_etudiant, prenom_etudiant, stage FROM etudiants';
 

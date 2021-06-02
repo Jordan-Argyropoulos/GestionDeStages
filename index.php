@@ -5,7 +5,7 @@
 </head>
 <body>
    <h1 class="box-title">Connexion</h1>
-   <form class="box" action="./php/login.php" method="post" name="login">
+   <form class="box" action="./login.php" method="post" name="login">
       <input type="text" class="box-input" name="email_etudiant" placeholder="Adresse mail">
       <input type="password" class="box-input" name="password" placeholder="Mot de passe">
       <input type="submit" value="connexion" name="valider" class="box-button">

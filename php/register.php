@@ -1,6 +1,6 @@
 <?php
    session_start();
-   include("config.php");
+   include("./config.php");
    $nom=$_POST["nom_etudiant"];
    $prenom=$_POST["prenom_etudiant"];
    $email=$_POST["email_etudiant"];
@@ -18,7 +18,7 @@
       else{
          $ins=$pdo->prepare("INSERT into etudiants(nom_etudiant,prenom_etudiant,email_etudiant,password,password_confirm) values(:nom_etudiant,:prenom_etudiant,:email_etudiant,:password,:password_confirm)");
          if($ins->execute(array($nom,$prenom,$email,$pass,$repass)))
-            header("location:login.php");
+            header("location:./login.php");
       }   
    }
 ?>

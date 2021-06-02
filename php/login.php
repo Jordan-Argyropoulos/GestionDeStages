@@ -1,7 +1,6 @@
 <?php
    session_start();
-   include("config.php");
-   var_dump($_POST);
+   include("./config.php");
    $email = $_POST["email_etudiant"];
    $pass = $_POST["password"];
    $erreur="";
