@@ -59,7 +59,7 @@ function login_cb(res) {
 function logout_click() {
     var xhr=getXHR();
     var error = $("div_error");
-    xhr.open("GET","php/logout.php",true);
+    xhr.open("GET","./php/logout.php",true);
     xhr.send(null);
     disp("scr_login");
     $("inp_login").value="";
