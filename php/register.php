@@ -18,14 +18,14 @@
       $sel=$pdo->prepare("SELECT id_etudiant from etudiants where email_etudiant=? ");
       $sel->execute(array($email));
       $tab=$sel->fetchAll();
-      
-      //print_r($tab);
-      if(count($tab)>0)
-         $erreur="email existe déjà!";
+      if(count($tab)>0){
+         echo "Email existe déjà!";
+         //header("location:../frontregister.php");
+      }
       else{
          $ins=$pdo->prepare("INSERT into etudiants(nom_etudiant,prenom_etudiant,email_etudiant,password,password_confirm,stage) values(?,?,?,?,?,?)");
          if($ins->execute(array($nom,$prenom,$email,$pass,$repass,$stage)))
-            header("location:/php/login.php");
+            header("location:./../index.php");
       }   
    }
 ?>
