@@ -3,7 +3,7 @@
    // Informations d'identification
    $source = 'mysql:host=localhost;dbname=registration';
    $user = 'root';
-   $mdp = '';
+      $mdp = '';
    try{
       $pdo = new PDO($source, $user, $mdp);
       //var_dump($pdo);
@@ -21,10 +21,10 @@
       $sel->execute(array($email,$pass));
       $tab=$sel->fetchAll();
       if(count($tab)>0){
-         $_SESSION["prenomNom"]=ucfirst(strtolower($tab[0]["prenom_etudiant"])).
-         " ".strtoupper($tab[0]["nom_etudiant"]);
+         $_SESSION["prenomNom"]=ucfirst(strtoupper($tab[0]["nom_etudiant"])).
+         " ".ucfirst(strtolower($tab[0]["prenom_etudiant"]));
          $_SESSION["autoriser"]="oui";
-         header("location:./php/index.php");
+         header("location:./accueil.php");
       }
       else
          $erreur="Mauvais email ou mot de passe!";
