@@ -74,3 +74,13 @@ body {
       color: #FFFFFF;
       border-radius: 3px;
   }
+  .content{
+	  margin: 50px 100px 0px 100px;
+  }
+  .exo-menu{
+    width: 100%;
+    float: left;
+    list-style: none;
+    position:relative;
+    background: #23364B;
+  }

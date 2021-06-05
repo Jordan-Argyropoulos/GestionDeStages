@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php
 session_start();
 // Informations d'identification
@@ -32,4 +30,3 @@ foreach($pdo->query($sql) as $row){
 }
 
 ?>
-</html>
