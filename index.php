@@ -2,6 +2,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css" />
+  <script src="js/common.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
 </head>
 <body>
    
