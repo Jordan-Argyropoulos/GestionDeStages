@@ -23,7 +23,7 @@
       if(count($tab)>0){
          $_SESSION["prenomNom"]=ucfirst(strtoupper($tab[0]["nom_etudiant"])).
          " ".ucfirst(strtolower($tab[0]["prenom_etudiant"]));
-         $_SESSION["autoriser"]="oui";
+         $_SESSION["email_etudiant"]=$email;
          header("location:./accueil.php");
       }
       else
