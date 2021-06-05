@@ -3,3 +3,4 @@
 
     echo "<p> Bienvenue $_SESSION[prenomNom].</p>";
 ?>
+

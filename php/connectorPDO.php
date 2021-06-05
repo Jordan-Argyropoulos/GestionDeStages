@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 
 <?php
-require 'config.php';
+session_start();
+// Informations d'identification
+$source = 'mysql:host=localhost;dbname=registration';
+$user = 'root';
+   $mdp = '';
+try{
+   $pdo = new PDO($source, $user, $mdp);
+   //var_dump($pdo);
+}
+catch (PDOException $error ) {
+   $message = '<p>Erreur à la connexion : ' . $erreur->getMessage(). '</p>';
+   echo $message; die();
+}
 
 $sql = 'SELECT email_etudiant, nom_etudiant, prenom_etudiant, stage FROM etudiants';
 
