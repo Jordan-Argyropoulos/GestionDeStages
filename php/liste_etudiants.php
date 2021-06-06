@@ -13,7 +13,7 @@ catch (PDOException $error ) {
    echo $message; die();
 }
 
-$sql = 'SELECT email_etudiant, nom_etudiant, prenom_etudiant, stage FROM etudiants';
+$sql = 'SELECT email_etudiant, nom_etudiant, prenom_etudiant, stage FROM etudiants ORDER BY nom_etudiant';
 
     print "<table>";
     print "<th>Email</th>";
