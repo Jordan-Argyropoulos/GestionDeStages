@@ -7,11 +7,11 @@
 </head>
 <body>
    
-   <form class="box" action="./php/login.php" method="post" name="login">
+   <form class="box" action="./php/login.php" method="post" name="login" id="scr_login">
       <h1 class="box-title">Connexion</h1>
-      <input type="text" class="box-input" name="email_etudiant" placeholder="Adresse mail">
-      <input type="password" class="box-input" name="password" placeholder="Mot de passe">
-      <input type="submit" value="connexion" name="valider" class="box-button">
+      <input type="text" class="box-input" name="email_etudiant" placeholder="Adresse mail" id="inp_login">
+      <input type="password" class="box-input" name="password" placeholder="Mot de passe" id="inp_passwd">
+      <input type="submit" value="connexion" name="valider" class="box-button" id="inp_enter">
       <p class="box-register">Vous êtes nouveau ici? <a href="frontregister.php">S'inscrire</a></p>
    </form>
 

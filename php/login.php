@@ -16,7 +16,7 @@
    $email = $_POST["email_etudiant"];
    $pass = $_POST["password"];
    $erreur="";
-   if(isset($_POST['valider'])){ // vérifier !empty mail + pass
+   if(!empty($_POST["email_etudiant"]) && ($_POST["password"])){ // vérifier !empty mail + pass
       $sel=$pdo->prepare("SELECT * from etudiants where email_etudiant=? and password=? limit 1");
       $sel->execute(array($email,$pass));
       $tab=$sel->fetchAll();
@@ -28,5 +28,7 @@
       }
       else
          $erreur="Mauvais email ou mot de passe!";
+         echo $erreur;
+         
    }
 ?>

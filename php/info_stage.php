@@ -14,8 +14,8 @@ catch (PDOException $error ) {
    echo $message; die();
 }
 
-//$sql = "SELECT p.descritptif_sujets, p.nom_superviseur FROM sujets_stage p INNER JOIN etudiants j ON p.id_sujets = j.id_etudiant WHERE email_etudiant = '" . $_SESSION['email_etudiant'] . "'";
-$sql = "SELECT descritptif_sujets, nom_superviseur FROM sujets_stage ";
+$sql = "SELECT p.descritptif_sujets, p.nom_superviseur FROM sujets_stage p INNER JOIN etudiants j ON p.id_sujets = j.id_etudiant WHERE email_etudiant = '" . $_SESSION['email_etudiant'] . "'";
+//$sql = "SELECT descritptif_sujets, nom_superviseur FROM sujets_stage ";
 
 
     print "<table>";
