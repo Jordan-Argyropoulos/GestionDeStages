@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>exemple AJAX</title>
+  <link rel="stylesheet" href="css/styles.css" />
   <script src="js/common.js" type="text/javascript"></script>
   <script src="js/script.js" type="text/javascript"></script>
 </head>
