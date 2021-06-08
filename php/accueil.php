@@ -7,12 +7,12 @@
 <!DOCTYPE html>
 <html>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/common.js" type="text/javascript"></script>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="./../js/common.js" type="text/javascript"></script>
+    <script src="./../js/script.js" type="text/javascript"></script>
 </head>
 
 <body>
-	 <div class="content">
+	 <div class="content" id="scr_accueil">
 	 
 		<ul class="exo-menu">
 			<li><a class="active" href="./info_stage"><i class="fa fa-toggle-right"></i> Informations sur les stages choisis</a></li>
