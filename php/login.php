@@ -1,9 +1,10 @@
 <?php
    session_start();
+   //var_dump($_POST);
    // Informations d'identification
    $source = 'mysql:host=localhost;dbname=registration';
    $user = 'root';
-      $mdp = '';
+   $mdp = '';
    try{
       $pdo = new PDO($source, $user, $mdp);
       //var_dump($pdo);
@@ -16,7 +17,7 @@
    $email = $_POST["email_etudiant"];
    $pass = $_POST["password"];
    $erreur="";
-   if(!empty($_POST["email_etudiant"]) && ($_POST["password"])){ // vérifier !empty mail + pass
+   if(!empty($_POST["email_etudiant"]) && !empty($_POST["password"])){ // vérifier !empty mail + pass
       $sel=$pdo->prepare("SELECT * from etudiants where email_etudiant=? and password=? limit 1");
       $sel->execute(array($email,$pass));
       $tab=$sel->fetchAll();

@@ -17,7 +17,7 @@ function init() {
 function login_click() {
     var login=$("inp_login").value;
     var pass=$("inp_passwd").value;
-    var param = "mail="+encodeURIComponent(login);
+    var param = "email_etudiant="+encodeURIComponent(login);
     param=param+"&password="+encodeURIComponent(pass);
 
     var xhr=getXHR();
@@ -59,7 +59,7 @@ function login_cb(res) {
 function logout_click() {
     var xhr=getXHR();
     var error = $("div_error");
-    xhr.open("GET","./php/logout.php",true);
+    xhr.open("GET","./../php/logout.php",true);
     xhr.send(null);
     disp("scr_login");
     $("inp_login").value="";
