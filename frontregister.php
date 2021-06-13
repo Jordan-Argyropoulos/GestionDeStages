@@ -10,7 +10,6 @@
 
 <form class="box" action="./php/register.php" method="post" >
 	<h1 class="box-logo box-title"><a>Inscription</a></h1>
-   <h1 class="box-title">S'inscrire</h1>
 	<input type="text" class="box-input" name="nom_etudiant" placeholder="Nom" required  />
    <input type="text" class="box-input" name="prenom_etudiant" placeholder="Prénom" required  />
    <input type="text" class="box-input" name="email_etudiant" placeholder="Adresse mail" required id="email" />
