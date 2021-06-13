@@ -1,6 +1,5 @@
 <?php
 session_start();
-require ('/../php/navbar.php');
 // Informations d'identification
 $source = 'mysql:host=localhost;dbname=registration';
 $user = 'root';
