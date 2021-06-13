@@ -1,0 +1,8 @@
+ARGYROPOULOS Jordan
+
+VANROSSOMME Jean-Julien
+
+Une partie du javascript n'est pas au point.
+la requete SQL de la liste des étudiants ne fonctionne pas.
+Problème avec la navbar.
+le projet n'est malheureusement pas terminé à 100%.
