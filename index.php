@@ -23,7 +23,7 @@
         <h1 class="box-title"><a>Connexion</a></h1>
         <tr><td>Mail</td><td><input type="text" class="box-input" id="inp_login" required></td></tr>
         <tr><td>Password</td><td><input type="password" class="box-input" id="inp_passwd" required></td></tr>
-        <tr><td></td><td><button type="button" class="box-button" id="inp_enter">Enter</button></td></tr>
+        <tr><td></td><td><button type="button" class="box-button" id="inp_enter">Connexion</button></td></tr>
         <tr><td></td><td><p class="box-register">Vous êtes nouveau ici? <a href="frontregister.php">S'inscrire</a></p></td></tr>
       </table>
       <div id="div_error"></div>
