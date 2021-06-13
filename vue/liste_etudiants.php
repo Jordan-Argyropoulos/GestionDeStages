@@ -1,5 +1,6 @@
 <?php
 session_start();
+require ('/../php/navbar.php');
 // Informations d'identification
 $source = 'mysql:host=localhost;dbname=registration';
 $user = 'root';
@@ -13,7 +14,10 @@ catch (PDOException $error ) {
    echo $message; die();
 }
 
-$sql = 'SELECT email_etudiant, nom_etudiant, prenom_etudiant, stage FROM etudiants ORDER BY nom_etudiant';
+// $xml = new SimpleXMLElement('<users/>');
+ $sql = 'SELECT email_etudiant, nom_etudiant, prenom_etudiant, stage FROM etudiants ORDER BY nom_etudiant';
+// while($row = $sql->fetch(PDO::FETCH_ASSOC)){
+//    $user = $xml->addChild('nom_etudiant')
 
     print "<table>";
     print "<th>Email</th>";

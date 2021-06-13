@@ -30,7 +30,7 @@ function login_click() {
         }
     };
 
-    xhr.open("POST","./php/login.php",true);
+    xhr.open("POST","php/login.php",true);
     xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     xhr.send(param);
 }
@@ -59,7 +59,7 @@ function login_cb(res) {
 function logout_click() {
     var xhr=getXHR();
     var error = $("div_error");
-    xhr.open("GET","./../php/logout.php",true);
+    xhr.open("GET","php/logout.php",true);
     xhr.send(null);
     disp("scr_login");
     $("inp_login").value="";

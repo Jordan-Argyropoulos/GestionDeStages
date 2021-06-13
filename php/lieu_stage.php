@@ -19,7 +19,7 @@
    }
    
    $erreur="";
-   var_dump($_POST);
+   //var_dump($_POST);
    if(!empty($_POST["nom_entreprise"]) && ($_POST["ville_entreprise"])){
         if ((strlen($_POST["nom_entreprise"]) <= 2) && (strlen($_POST["ville_entreprise"]) <= 3)) {
             $erreur="Le nom de l'entreprise doit faire 2 lettres minimum et la ville doit faire au minimum 3 lettres.";
