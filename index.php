@@ -19,7 +19,7 @@
             <input type="submit" value="connexion" name="valider" class="box-button" id="inp_enter">
             <p class="box-register">Vous êtes nouveau ici? <a href="frontregister.php">S'inscrire</a></p>
         </form> -->
-      <table>
+      <table class="box">
         <h1 class="box-title"><a>Connexion</a></h1>
         <tr><td>Mail</td><td><input type="text" class="box-input" id="inp_login" required></td></tr>
         <tr><td>Password</td><td><input type="password" class="box-input" id="inp_passwd" required></td></tr>
